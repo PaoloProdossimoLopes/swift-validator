@@ -1,8 +1,13 @@
-#  TITLE
-DESCRIPTION ...
+#  VALIDATOR
+Validator is a a struct, must be contains some logic do avoid massive components and help to find erros in logic.
 
 ## 🧰 Example:
 ```swift
+let validator: ValidateDataHandler = .init()
+//Should implement your cases and validations
+
+validator.validate(rule: .isEmptyStateCell) //Return: true
+validator.validate(rule: .isStandartCell) //Return: false
 ```
 
 ## 📃 License:
