@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var validator: ValidateDataHandler {
+        return .init(balanceModel: nil, statementModel: nil, errors: [])
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(validator.validate(rule: .isBalaceView))
+        print(validator.validate(rule: .isErrorView))
+        print(validator.validate(rule: .isEmptyStateCell))
+        print(validator.validate(rule: .isStandartCell))
     }
-
-
 }
 
